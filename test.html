@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PalawanPay Dashboard</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Times New Roman", sans-serif;
+    }
+
+    body {
+      background: #f1bdbd;
+      color: #333;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: auto;
+      padding: 1rem;
+      background: #fcfcfc;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Header */
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Greeting */
+    .greeting {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .avatar {
+      background-color: green;
+      color: rgb(255, 255, 255);
+      padding: 0.5rem;
+      border-radius: 50%;
+      margin-right: 0.75rem;
+    }
+
+    .Basic {
+      color: rgb(241, 16, 0);
+      font-size: 0.85rem;
+    }
+
+    .Basic a {
+      color: goldenrod;
+      text-decoration: none;
+    }
+
+    /* Balance Card */
+    .balance-card {
+      background: linear-gradient(45deg, #35a84f, #a3d15f);
+      color: white;
+      border-radius: 12px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .balance-header h2 {
+      font-size: 1.8rem;
+    }
+
+    .balance-actions {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .btn {
+      background: white;
+      color: #35a84f;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* Transactions */
+    .recent-transactions {
+      margin-bottom: 1rem;
+    }
+
+    .transact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .transact-card {
+      background: #f0f0f0;
+      padding: 0.5rem;
+      border-radius: 8px;
+      flex: 1;
+      min-width: 45%;
+      font-size: 0.85rem;
+    }
+
+    /* Features */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 4rem;
+      font-size: 0.85rem;
+      text-align: center;
+    }
+
+    .feature {
+      background: #f7f7f7;
+      border-radius: 8px;
+      padding: 0.75rem 0.25rem;
+    }
+
+    .new::after {
+      content: "NEW";
+      display: block;
+      color: red;
+      font-size: 0.6rem;
+      margin-top: 2px;
+    }
+
+    /* Bottom Nav */
+    .nav-bar {
+      position: relative;
+      background: rgb(170, 31, 31);
+      display: flex;
+      justify-content: space-around;
+      padding: 0.5rem 0;
+      border-top: 1px solid #030000;
+    }
+
+    .nav-item {
+      font-size: 0.85rem;
+      text-align: center;
+      color: #020202;
+    }
+
+    .nav-item.active {
+      color: rgb(0, 0, 0);
+    }
+
+    .nav-item.center {
+      background: rgb(0, 0, 0);
+      border-radius: 50%;
+      padding: 0.5rem;
+      margin-top: -1.5rem;
+      box-shadow: 0 0 6px rgba(26, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="top-bar">
+      <span class="time">6:00</span>
+      <div class="status-icons">
+        <span class="wifi">📶</span>
+        <span class="battery">🔋 15%</span>
+      </div>
+    </header>
+
+    <section class="greeting">
+      <div class="avatar">👤</div>
+      <div>
+        <p><strong>Good Morning Rich-mond!</strong></p>
+        <p class="Basic">✅ Basic <a href="#">Upgrade Now!</a></p>
+      </div>
+    </section>
+
+    <section class="balance-card">
+      <div class="balance-header">
+        <h2>₱1,000,000</h2>
+        <p>5,000 PalawanPay Points</p>
+      </div>
+      <div class="balance-actions">
+        <button class="btn">Cash In</button>
+        <button class="btn">Cash Out</button>
+      </div>
+    </section>
+
+    <section class="recent-transactions">
+      <h3>Transact Again</h3>
+      <div class="transact-buttons">
+        <div class="transact-card">QR Send to Tropa<br>••••••••5555</div>
+        <div class="transact-card">Send to Plastic<br>••••••••1234</div>
+        <div class="transact-card">Pay MetroBank Rich-mond<br>••••••••911</div>
+      </div>
+    </section>
+
+    <section class="features">
+      <div class="feature">💸 Bigay ka pera</div>
+      <div class="feature new">🆕 Utang ka muna</div>
+      <div class="feature">📲 Pa load ka boy?</div>
+      <div class="feature">📄 Bayad ka muna</div>
+      <div class="feature new">🎤 Hev Abi</div>
+      <div class="feature">🛡️ ProtekTODO</div>
+      <div class="feature">💵 Kuha ka Padala boy</div>
+      <div class="feature new">🌍 Pera Padala Abroad</div>
+    </section>
+
+    <footer class="nav-bar">
+      <div class="nav-item active">🏠 Home</div>
+      <div class="nav-item">🎁 Rewards</div>
+      <div class="nav-item center">🔳</div>
+      <div class="nav-item">🧾 Transactions</div>
+      <div class="nav-item">❓ Help</div>
+    </footer>
